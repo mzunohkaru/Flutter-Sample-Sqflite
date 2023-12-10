@@ -1,16 +1,10 @@
-# sqflite_sample
+# UI
 
-A new Flutter project.
+![Screenshot_1702176057](https://github.com/mzunohkaru/Flutter-Sample-Sqflite/assets/99012157/d295ea3e-e00b-415c-a7bf-04e54e7eeaa3)
 
-## Getting Started
+# 保存データの種類
+・String
+・Bool
+・DateTime
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1702176064](https://github.com/mzunohkaru/Flutter-Sample-Sqflite/assets/99012157/49b81b2d-e5e5-48b7-a855-8c8f60e55a9f)
