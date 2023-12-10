@@ -28,7 +28,8 @@ class NotesDatabase {
     final textType = 'TEXT NOT NULL';
     final boolType = 'BOOLEAN NOT NULL';
 
-    await db.execute('''
+    await db.execute(
+        '''
 CREATE TABLE $tableNotes ( 
   ${NoteFields.id} $idType, 
   ${NoteFields.isImportant} $boolType,
@@ -101,6 +102,20 @@ CREATE TABLE $tableNotes (
       tableNotes,
       where: '${NoteFields.id} = ?',
       whereArgs: [id],
+    );
+  }
+
+  Future<List<Map<String, dynamic>>> search(String query) async {
+    final db = await instance.database;
+
+    // return await db.query(
+    //   'notes',
+    //   where: 'title LIKE ?',
+    //   whereArgs: ['%$query%'],
+
+    return await db.rawQuery(
+      'SELECT * FROM notes WHERE title LIKE ? OR description LIKE ?',
+      ['%$query%', '%$query%'],
     );
   }
 

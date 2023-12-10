@@ -32,7 +32,7 @@ class NoteCardWidget extends StatelessWidget {
       color: color,
       child: Container(
         constraints: BoxConstraints(minHeight: minHeight),
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,19 +43,19 @@ class NoteCardWidget extends StatelessWidget {
                   time,
                   style: TextStyle(color: Colors.grey.shade700),
                 ),
-                Spacer(),
+                const Spacer(),
                 note.isImportant
-                    ? CircleAvatar(
+                    ? const CircleAvatar(
                         radius: 3,
                         backgroundColor: Colors.red,
                       )
                     : const SizedBox()
               ],
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             Text(
               note.title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

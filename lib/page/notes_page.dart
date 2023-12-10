@@ -4,6 +4,7 @@ import 'package:sqflite_sample/db/notes_database.dart';
 import 'package:sqflite_sample/model/note.dart';
 import 'package:sqflite_sample/page/edit_note_page.dart';
 import 'package:sqflite_sample/page/note_detail_page.dart';
+import 'package:sqflite_sample/page/notes_search_page.dart';
 import 'package:sqflite_sample/widget/note_card_widget.dart';
 
 class NotesPage extends StatefulWidget {
@@ -44,7 +45,16 @@ class _NotesPageState extends State<NotesPage> {
             'Notes',
             style: TextStyle(fontSize: 24),
           ),
-          actions: [Icon(Icons.search), SizedBox(width: 12)],
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const NoteSearchPage()),
+                );
+              },
+              icon: const Icon(Icons.search),
+            ),
+          ],
         ),
         body: Center(
           child: isLoading
